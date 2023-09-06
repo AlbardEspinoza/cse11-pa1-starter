@@ -2,4 +2,74 @@ import tester.*;
 
 class DesignRecipeExamples {
 
+    int perimeter1 = this.perimeter(9, 7); // expected = 63
+    int perimeter2 = this.perimeter(3, 12); // expected = 36
+    int perimeter3 = this.perimeter(-2, 3); // expected = 0
+    int borderArea1 = this.borderArea(4, 2, 3, 7); // expected = 13
+    int borderArea2 = this.borderArea(12, 12, 3, 19);  // expected = 87
+    int borderArea3 = this.borderArea(-3, 4, 5, -8); // expected = 0;
+    int fahrenheit1 = this.fahrenheitToCelsius(32); // expected = 0
+    int fahrenheit2 = this.fahrenheitToCelsius(91); // expected = 32
+    int getFahrenheit3 = this.fahrenheitToCelsius(-18); // expected = -27
+
+    /**
+     * This method takes two parameters, base and height of a rectangle, as ints
+     * and returns an int that stores the resulting area of multiplying the
+     * parameters.
+     * Note: it can only take positive arguments.
+     *
+     * @param base
+     * @param height
+     * @return
+     */
+    int perimeter(int base, int height) {
+        int result = 0;
+        if (base <= 0 || height <= 0) {
+            System.out.println("Arguments must be positive.\n");
+        } else {
+            result = base * height;
+        }
+        return result;
+    }
+
+    /**
+     * This method takes 4 parameters, the base and height of two rectangles, as ints
+     * and returns an int that stores the resulting area that's the difference
+     * between the
+     * two areas of both rectangles.
+     * Note: it can only take positive arguments.
+     *
+     * @param base1
+     * @param height1
+     * @param base2
+     * @param height2
+     * @return result
+     */
+    int borderArea(int base1, int height1, int base2, int height2) {
+        int result = 0;
+        if (base1 <= 0 || height1 <= 0 || base2 <= 0 || height2 <= 0) {
+            System.out.println("Arguments must be positive.\n");
+        } else {
+            int area1 = base1 * height1;
+            int area2 = base2 * height2;
+            if (area1 >= area2) {
+                result = area1 - area2;
+            } else {
+                result = area2 - area1;
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * This method takes an int, degrees Fahrenheit value, and
+     * returns the equivalent value of degrees Celsius.
+     *
+     * @param fahrenheit
+     * @return
+     */
+    int fahrenheitToCelsius(int fahrenheit) {
+        return (int) ((fahrenheit - 32) / 1.8);
+    }
 }
