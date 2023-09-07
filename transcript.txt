@@ -1,0 +1,25 @@
+Arguments must be positive.
+
+Arguments must be positive.
+
+Tester Library v.3.0
+-----------------------------------
+Tests defined in the class: DesignRecipeExamples:
+---------------------------
+DesignRecipeExamples:
+---------------
+new DesignRecipeExamples:1(
+ this.getPerimeter1 = 63
+ this.getPerimeter2 = 36
+ this.getPerimeter3 = 0
+ this.getBorderArea1 = 13
+ this.getBorderArea2 = 87
+ this.getBorderArea3 = 0
+ this.getFahrenheit1 = 0
+ this.getFahrenheit2 = 32
+ this.getFahrenheit3 = -27
+ this.getTotalInches1 = 72
+ this.getTotalInches2 = 49
+ this.getGetTotalInches3 = 0)
+---------------
+No test methods found.
