@@ -2,15 +2,18 @@ import tester.*;
 
 class DesignRecipeExamples {
 
-    int perimeter1 = this.perimeter(9, 7); // expected = 63
-    int perimeter2 = this.perimeter(3, 12); // expected = 36
-    int perimeter3 = this.perimeter(-2, 3); // expected = 0
-    int borderArea1 = this.borderArea(4, 2, 3, 7); // expected = 13
-    int borderArea2 = this.borderArea(12, 12, 3, 19);  // expected = 87
-    int borderArea3 = this.borderArea(-3, 4, 5, -8); // expected = 0;
-    int fahrenheit1 = this.fahrenheitToCelsius(32); // expected = 0
-    int fahrenheit2 = this.fahrenheitToCelsius(91); // expected = 32
+    int getPerimeter1 = this.perimeter(9, 7); // expected = 63
+    int getPerimeter2 = this.perimeter(3, 12); // expected = 36
+    int getPerimeter3 = this.perimeter(-2, 3); // expected = 0
+    int getBorderArea1 = this.borderArea(4, 2, 3, 7); // expected = 13
+    int getBorderArea2 = this.borderArea(12, 12, 3, 19);  // expected = 87
+    int getBorderArea3 = this.borderArea(-3, 4, 5, -8); // expected = 0
+    int getFahrenheit1 = this.fahrenheitToCelsius(32); // expected = 0
+    int getFahrenheit2 = this.fahrenheitToCelsius(91); // expected = 32
     int getFahrenheit3 = this.fahrenheitToCelsius(-18); // expected = -27
+    int getTotalInches1 = this.feetAndInchesToTotalInches(6, 0); // expected = 72
+    int getTotalInches2 = this.feetAndInchesToTotalInches(3, 13); // expected = 49
+    int getGetTotalInches3 = this.feetAndInchesToTotalInches(-1, 4); // expected = 0
 
     /**
      * This method takes two parameters, base and height of a rectangle, as ints
@@ -71,5 +74,24 @@ class DesignRecipeExamples {
      */
     int fahrenheitToCelsius(int fahrenheit) {
         return (int) ((fahrenheit - 32) / 1.8);
+    }
+
+    /**
+     * This method converts the parameters feet and inches
+     * into the total number of inches and return the result.
+     * Note: it only accepts non-negative values for both parameters.
+     * If a negative value is received then it will automatically
+     * return 0.
+     *
+     * @param feet
+     * @param inches
+     * @return totalInches
+     */
+    int feetAndInchesToTotalInches(int feet, int inches) {
+        int totalInches = 0;
+        if (feet >= 0 && inches >= 0) {
+            totalInches = feet * 12 + inches;
+        }
+        return totalInches;
     }
 }
