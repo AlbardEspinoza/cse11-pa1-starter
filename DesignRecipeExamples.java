@@ -21,9 +21,9 @@ class DesignRecipeExamples {
      * parameters.
      * Note: it can only take positive arguments.
      *
-     * @param base
-     * @param height
-     * @return
+     * @param base of rectangle
+     * @param height of rectangle
+     * @return perimeter of rectangle
      */
     int perimeter(int base, int height) {
         int result = 0;
@@ -42,11 +42,11 @@ class DesignRecipeExamples {
      * two areas of both rectangles.
      * Note: it can only take positive arguments.
      *
-     * @param base1
-     * @param height1
-     * @param base2
-     * @param height2
-     * @return result
+     * @param base1 base of first rectangle
+     * @param height1 height of first rectangle
+     * @param base2 base of second rectangle
+     * @param height2 height of second rectangle
+     * @return difference between the areas of both rectangles
      */
     int borderArea(int base1, int height1, int base2, int height2) {
         int result = 0;
@@ -69,8 +69,8 @@ class DesignRecipeExamples {
      * This method takes an int, degrees Fahrenheit value, and
      * returns the equivalent value of degrees Celsius.
      *
-     * @param fahrenheit
-     * @return
+     * @param fahrenheit degrees to convert to degrees Celsius
+     * @return the equivalent value of Fahrenheit degrees to degrees Celsius
      */
     int fahrenheitToCelsius(int fahrenheit) {
         return (int) ((fahrenheit - 32) / 1.8);
@@ -83,9 +83,9 @@ class DesignRecipeExamples {
      * If a negative value is received then it will automatically
      * return 0.
      *
-     * @param feet
-     * @param inches
-     * @return totalInches
+     * @param feet integer number of feet
+     * @param inches integer number of inches
+     * @return total number of inches
      */
     int feetAndInchesToTotalInches(int feet, int inches) {
         int totalInches = 0;
